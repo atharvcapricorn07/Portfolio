@@ -1,0 +1,248 @@
+/* =========================
+   Global Reset & Variables
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #0e0e11;
+    --bg-secondary: #15151b;
+
+    --text-primary: #eaeaea;
+    --text-secondary: #b5b5b5;
+
+    --accent-burgundy: #7a1f2b;
+    --accent-burgundy-hover: #922738;
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   Base Layout
+========================= */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+
+    line-height: 1.7;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* =========================
+   Layout Utilities
+========================= */
+
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 2rem 7rem;
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+
+.site-header {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.75rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.25rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+    color: var(--accent-burgundy);
+}
+
+.nav-links a.active {
+    font-weight: 600;
+    color: var(--accent-burgundy);
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+    color: var(--accent-burgundy);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 720px;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Focus Areas
+========================= */
+
+.focus-areas {
+    margin-top: 4rem;
+}
+
+.focus-areas ul {
+    list-style: none;
+    display: grid;
+    gap: 1.1rem;
+}
+
+.focus-areas li {
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.focus-areas li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent-burgundy);
+}
+
+/* =========================
+   Call to Action
+========================= */
+
+.cta {
+    margin-top: 4.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.9rem 1.75rem;
+    background-color: var(--accent-burgundy);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-burgundy-hover);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Project Sections
+========================= */
+
+.project-header {
+    margin-bottom: 5rem;
+}
+
+.project-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-burgundy);
+}
+
+.project-header p {
+    max-width: 720px;
+    color: var(--text-secondary);
+}
+
+.project-section {
+    margin-bottom: 4.75rem;
+}
+
+.project-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.project-section p {
+    max-width: 720px;
+    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.project-section ul {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+}
+
+.project-section li {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Footer (Sticky)
+========================= */
+
+.site-footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: 1.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .container {
+        padding: 4rem 1.5rem 6rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
